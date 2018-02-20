@@ -1,0 +1,20 @@
+{
+    "dependencies": {},
+    "description": "Driver for Texas Instrument CC3000",
+    "fullname": "lib.texas.cc3000",
+    "git_pointer": "zerynth://zerynth-libs/texas-cc3000",
+    "info": {
+        "chip_manufacturer": "Texas Instrument",
+        "chip_name": "CC3000",
+        "name": "Wi-Fi Driver",
+        "type": "Connectivity"
+    },
+    "keywords": [
+        "wireless",
+        "wifi"
+    ],
+    "repo": "official",
+    "title": "Texas Instrument CC3000 driver",
+    "version": "r2.0.11",
+    "whatsnew": "Fixed compilation error"
+}

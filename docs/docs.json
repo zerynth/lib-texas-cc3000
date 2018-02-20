@@ -1,0 +1,9 @@
+{
+	"version":"0.3.1",
+	"title":"CC3000 Wifi Driver",
+	"copyright":"Zerynth Team",
+	"files":[
+		["CC3000","cc3000.py"],
+		["CC3000 Tiny","cc3000_tiny.py"]
+	]
+}
