@@ -533,6 +533,7 @@ void WlanInterruptDisable() {
 int cc3000WlanInit(uint16_t spi_ph, uint16_t nss, uint16_t wen, uint16_t irq) {
     /* Hold the SPI Driver to be used */
     int ret;
+    SpiPins *spipins = ((SpiPins*)_vm_pin_map(PRPH_SPI));
 
     irqpin = irq;
     wenpin = wen;
@@ -541,9 +542,9 @@ int cc3000WlanInit(uint16_t spi_ph, uint16_t nss, uint16_t wen, uint16_t irq) {
 
    //printf("cc3000WlanInit: got spi_prh %i\n", spi_prph);
     spi_conf.clock = 14000000;
-    spi_conf.miso = _vm_spi_pins[spi_prph].miso;
-    spi_conf.mosi = _vm_spi_pins[spi_prph].mosi;
-    spi_conf.sclk = _vm_spi_pins[spi_prph].sclk;
+    spi_conf.miso = spipins[spi_prph].miso;
+    spi_conf.mosi = spipins[spi_prph].mosi;
+    spi_conf.sclk = spipins[spi_prph].sclk;
     spi_conf.nss = nss;
     spi_conf.mode = SPI_MODE_LOW_SECOND;
     spi_conf.bits = SPI_BITS_8;
